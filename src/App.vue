@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <Header />
-    <QuoteBox />
+    <QuoteBox
+    :currentQuote="quoteData"
+    />
   </div>
 </template>
 
 <script>
+
 import Header from './components/Header.vue'
 import QuoteBox from './components/QuoteBox.vue'
 
@@ -15,12 +18,22 @@ export default {
     Header,
     QuoteBox
   },
+  data() {
+    return {
+      quoteData: {},
+      quote: 'quote',
+      author: 'author'
+    }
+  },
   mounted: function() {
     fetch('http://quotes.stormconsultancy.co.uk/random.json', {
       method: 'get'
     })
       .then((response) => {
-        console.log(response.json());
+        return response.json();
+      })
+      .then((jsonData) => {
+        this.quoteData = jsonData
       })
   }
 }
