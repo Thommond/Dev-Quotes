@@ -1,9 +1,10 @@
 <template>
   <div>
-   <h3>{{ currentQuote.author }}</h3>
-   <p>{{ currentQuote.quote }}</p>
+   <p>"{{ currentQuote.quote }}"</p>
+   <h3>- {{ currentQuote.author }}</h3>
   </div>
 </template>
+
 
 <script>
   export default {
@@ -12,3 +13,9 @@
     }
   }
 </script>
+
+<style>
+  p {
+    font-style: italic;
+  }
+</style>
