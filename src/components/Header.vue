@@ -2,9 +2,11 @@
   <div>
     <h1>Developer Quote Generator!</h1>
 
-    <button @click="window.location.reload(true)" type="button">New Quote</button>
+    <button onclick="location.reload()" type="button">New Quote</button>
  </div>
 </template>
+
+
 
 <style>
 

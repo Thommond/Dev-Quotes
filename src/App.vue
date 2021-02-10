@@ -3,6 +3,7 @@
     <Header />
     <QuoteBox
     :currentQuote="quoteData"
+    :refresh="refresh"
     />
   </div>
 </template>
@@ -13,6 +14,7 @@ import Header from './components/Header.vue'
 import QuoteBox from './components/QuoteBox.vue'
 
 export default {
+
   name: 'App',
   components: {
     Header,
@@ -23,6 +25,11 @@ export default {
       quoteData: {},
       quote: 'quote',
       author: 'author'
+    }
+  },
+  methods: {
+    refresh() {
+      return window.location.reload(true);
     }
   },
   mounted: function() {
@@ -38,10 +45,15 @@ export default {
   }
 }
 
-
 </script>
 
 <style>
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: tan;
+}
 
 #app {
 
