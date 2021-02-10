@@ -1,24 +1,7 @@
-# quote-generator
+# Developer-Quote-generator
+A fun and basic developer quote
+generator.
 
-## Project setup
-```
-npm install
-```
+## Usage
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Go to the web page, press a button and get a cool development related quote!
